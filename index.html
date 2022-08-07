@@ -21,17 +21,17 @@
         wecome to battle feild <br>
            chose your hero
         </h3>
-        <img src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png" id="cloud" style="width:80px;height:80px">
-        <img src="https://static.wikia.nocookie.net/nintendo/images/3/3f/Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.png/revision/latest?cb=20190710193146&path-prefix=en" id="rob" style="width:80px;height:80px">
-        <img src="http://i2.hdslb.com/bfs/archive/6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg" id="metaknight" style="width:80px;height:80px"><br>
+        <img src="./main8.webp" id="cloud" style="width:80px;height:80px">
+        <img src="./Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.webp" id="rob" style="width:80px;height:80px">
+        <img src="./6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg" id="metaknight" style="width:80px;height:80px"><br>
         <button onclick="clonbus()" id="bo">cloud</button>
         <button onclick="slonbus()" id="mo"> rob</button>
         <button onclick="alonbus()" id="ko">meta knight</button>
-        <img src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png" id="hero" style="width:80px;height:80px;position: absolute;top: 500px;left: 50px;display: none;"><br>
+        <img src="./main8.webp" id="hero" style="width:80px;height:80px;position: absolute;top: 500px;left: 50px;display: none;"><br>
         <button onclick="klonbus()" id="co">atack</button>
         <button onclick="mlonbus()" id="koa">defend</button>
-        <img src="https://p1.toutiaoimg.com/large/tos-cn-i-0022/12a78a869ab14378976f27a618c3b034" id="atack" style="width:800px;height:800px;position: absolute;top: 3px;left: 200px;display: none;">
-        <img src=" http://i2.hdslb.com/bfs/archive/f979e42444426746f63cd616e2913439234e38f0.jpg" class="pig" style="width:80px;height:80px;position: absolute;top: 500px;right: 50px;"><br>
+        <img src="./maxresdefault.jpg" id="atack" style="width:800px;height:800px;position: absolute;top: 3px;left: 200px;display: none;">
+        <img src=" ./f979e42444426746f63cd616e2913439234e38f0.jpg" class="pig" style="width:80px;height:80px;position: absolute;top: 500px;right: 50px;"><br>
         <img src="https://i.ytimg.com/vi/axCXyFwLBdg/maxresdefault.jpg" id="defend" style="width:800px;height:800px;position: absolute;top: 3px;left: 90px;display: none;"><br>
         <script>
             var spawn;
@@ -70,7 +70,7 @@
             }
             function slonbus(){
                 var hero=document.getElementById("hero");
-                hero.src="https://static.wikia.nocookie.net/nintendo/images/3/3f/Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.png/revision/latest?cb=20190710193146&path-prefix=en";
+                hero.src="./Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.webp";
                 hero.style.display="block";
                 var mo=document.getElementById("mo");
                 mo.style.display="none";
@@ -83,7 +83,7 @@
             }
             function alonbus(){
                 var hero=document.getElementById("hero");
-                hero.src="http://i2.hdslb.com/bfs/archive/6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg";
+                hero.src="./6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg";
                 hero.style.display="block";
                 var mo=document.getElementById("mo");
                 mo.style.display="none";
@@ -96,7 +96,7 @@
             }
             function clonbus(){
                 var hero=document.getElementById("hero");
-                hero.src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png";
+                hero.src="./main8.webp";
                 hero.style.display="block";
                 var mo=document.getElementById("mo");
                 mo.style.display="none";
@@ -140,7 +140,7 @@
             }
             function pigspawn(){
                 var newpig=document.createElement("img");
-                newpig.src="http://i2.hdslb.com/bfs/archive/f979e42444426746f63cd616e2913439234e38f0.jpg";
+                newpig.src="./f979e42444426746f63cd616e2913439234e38f0.jpg";
                 newpig.style.width="80px";
                 newpig.style.height="80px";
                 newpig.style.position="absolute";
