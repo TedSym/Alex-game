@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <title>
+            gogame
+        </title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap" rel="stylesheet">
+        <style>
+            body{
+                background-image:url("https://yxbao-img.xiazaibao2.com/article/image/202007/08/efa9a20152.jpg");
+                background-attachment: fixed;
+                background-size: cover;
+                background-repeat: no-repeat;    
+                font-family: 'ZCOOL QingKe HuangYou', cursive; 
+            }
+        </style>
+    </head>
+    <body id="body">
+        <h3>
+        wecome to battle feild <br>
+           chose your hero
+        </h3>
+        <img src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png" id="cloud" style="width:80px;height:80px">
+        <img src="https://static.wikia.nocookie.net/nintendo/images/3/3f/Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.png/revision/latest?cb=20190710193146&path-prefix=en" id="rob" style="width:80px;height:80px">
+        <img src="http://i2.hdslb.com/bfs/archive/6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg" id="metaknight" style="width:80px;height:80px"><br>
+        <button onclick="clonbus()" id="bo">cloud</button>
+        <button onclick="slonbus()" id="mo"> rob</button>
+        <button onclick="alonbus()" id="ko">meta knight</button>
+        <img src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png" id="hero" style="width:80px;height:80px;position: absolute;top: 500px;left: 50px;display: none;"><br>
+        <button onclick="klonbus()" id="co">atack</button>
+        <button onclick="mlonbus()" id="koa">defend</button>
+        <img src="https://p1.toutiaoimg.com/large/tos-cn-i-0022/12a78a869ab14378976f27a618c3b034" id="atack" style="width:800px;height:800px;position: absolute;top: 3px;left: 200px;display: none;">
+        <img src=" http://i2.hdslb.com/bfs/archive/f979e42444426746f63cd616e2913439234e38f0.jpg" class="pig" style="width:80px;height:80px;position: absolute;top: 500px;right: 50px;"><br>
+        <img src="https://i.ytimg.com/vi/axCXyFwLBdg/maxresdefault.jpg" id="defend" style="width:800px;height:800px;position: absolute;top: 3px;left: 90px;display: none;"><br>
+        <script>
+            var spawn;
+            function klonbus(){
+                var atack=document.getElementById("atack");
+                atack.style.display="block";
+                var pig=document.getElementsByClassName("pig");
+                for(var i=0;i<pig.length;i++){
+                    if(parseInt(pig[i].style.right)>=200){
+                        pig[i].style.display="none";
+                        pig[i].style.right="0px";
+                        pig[i].className="";
+                    }
+                }
+                setTimeout(gog,2000);
+                var atackbtn=document.getElementById("co");
+                atackbtn.disabled=true;
+                setTimeout(no,6000);
+            }
+            function pigmove(){
+                var pig=document.getElementsByClassName("pig");
+                for(var i=0;i<pig.length;i++){
+                    if(pig[i].style.right=="1100px"){
+                        var hero=document.getElementById("hero");   
+                        hero.style.display="none";
+                        for(var j=0;j<pig.length;j++){
+                            pig[j].style.right=-1;
+                        }
+                        alert("game over");
+                        clearInterval(spawn);
+                    }
+                    if(parseInt(pig[i].style.right)>=0){
+                        pig[i].style.right=parseInt(pig[i].style.right)+10+"px";                        
+                    }
+                }
+            }
+            function slonbus(){
+                var hero=document.getElementById("hero");
+                hero.src="https://static.wikia.nocookie.net/nintendo/images/3/3f/Super_Smash_Bros._Ultimate_-_Character_Art_-_R.O.B._2.png/revision/latest?cb=20190710193146&path-prefix=en";
+                hero.style.display="block";
+                var mo=document.getElementById("mo");
+                mo.style.display="none";
+                var ko=document.getElementById("ko");
+                ko.style.display="none";
+                var bo=document.getElementById("bo");
+                bo.style.display="none";
+                setInterval(pigmove,400);
+                spawn=setInterval(pigspawn,6000);
+            }
+            function alonbus(){
+                var hero=document.getElementById("hero");
+                hero.src="http://i2.hdslb.com/bfs/archive/6b4ca973b80344aeb3029b116313cf3bda6f2b9f.jpg";
+                hero.style.display="block";
+                var mo=document.getElementById("mo");
+                mo.style.display="none";
+                var ko=document.getElementById("ko");
+                ko.style.display="none";
+                var bo=document.getElementById("bo");
+                bo.style.display="none";
+                setInterval(pigmove,400);
+                spawn=setInterval(pigspawn,6000);Y
+            }
+            function clonbus(){
+                var hero=document.getElementById("hero");
+                hero.src="https://www.smashbros.com/assets_v2/img/fighter/cloud/main8.png";
+                hero.style.display="block";
+                var mo=document.getElementById("mo");
+                mo.style.display="none";
+                var ko=document.getElementById("ko");
+                ko.style.display="none";
+                var bo=document.getElementById("bo");
+                bo.style.display="none";
+                setInterval(pigmove,400);
+                spawn=setInterval(pigspawn,6000);
+
+            }
+            function gog(){
+                var atack=document.getElementById("atack");
+                var defend=document.getElementById("defend");
+                atack.style.display="none";
+                defend.style.display="none";
+            }
+            function momo(){
+                var defend=document.getElementById("koa");
+                defend.disabled=false;
+            }
+            function no(){
+                var atack=document.getElementById("co");
+                atack.disabled=false;
+
+            }
+            function mlonbus(){
+                var defend=document.getElementById("defend");
+                defend.style.display="block";
+                var pig=document.getElementsByClassName("pig");
+                    for(var i=0;i<pig.length;i++){
+                        if(parseInt(pig[i].style.right)>=200){
+                        pig[i].style.right=parseInt(pig[i].style.right)-200+"px";    
+                    }
+                }
+                setTimeout(gog,2000);
+                var defendbtn=document.getElementById("koa");
+                defendbtn.disabled=true;
+                setTimeout(momo,6000);
+                
+            }
+            function pigspawn(){
+                var newpig=document.createElement("img");
+                newpig.src="http://i2.hdslb.com/bfs/archive/f979e42444426746f63cd616e2913439234e38f0.jpg";
+                newpig.style.width="80px";
+                newpig.style.height="80px";
+                newpig.style.position="absolute";
+                newpig.style.top="500px";
+                newpig.style.right="50px";
+                newpig.className="pig";
+                document.getElementById("body").appendChild(newpig);
+            }
+        </script>
+    </body>
+</html>
